@@ -1,13 +1,44 @@
 "use client";
 
 import { useState } from "react";
-import { Wallet } from "lucide-react";
+import { Button } from "@/components/button";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { authAtom, ConnectWalletVisibleAtom } from "@/state";
+import { useWallet } from "@txnlab/use-wallet";
 import RotatingBackground from "@/components/rotating-background";
+
+import { useNotify } from "@/hooks/useNotify";
+
+import { usePathname } from "next/navigation";
 
 function RegisterPage() {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [showWalletConnect, setShowWalletConnect] = useRecoilState(
+    ConnectWalletVisibleAtom,
+  );
+  // const [showProfilePopup, setShowProfilePopup] = useState(false);
+  // const [showEditProfilePopup, setShowEditProfilePopup] = useState(false);
+  // const profile = useRecoilValue(ProfileAtom);
+  // const [loggingIn, setLoggingIn] = useState(false);
+  // const { logout, login, signAuthTransaction } = useAuthActions();
+  // const { getProfile } = useProfileActions();
+  const auth = useRecoilValue(authAtom);
+  const { notify } = useNotify();
+  const { activeAddress } = useWallet();
 
-  //  h-161.75
+  const pathname = usePathname();
+
+  const userIsLoggedin = !!auth && !!activeAddress;
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleNotifications = () => {
+    setShowNotifications(!showNotifications);
+  };
 
   return (
     <div
@@ -32,16 +63,19 @@ function RegisterPage() {
               >
                 <span className="text-white font-semibold">1</span>
               </div>
-              <button
-                onClick={() => setCurrentStep(1)}
-                className={`px-6 py-3 rounded-lg border-2 transition-all ${
-                  currentStep >= 1
-                    ? "border-orange-500 text-orange-500 bg-transparent"
-                    : "border-gray-600 text-gray-500 bg-transparent"
-                }`}
-              >
-                Connect Wallet
-              </button>
+              <div className="hidden lg:flex justify-center items-center relative">
+                {!activeAddress && (
+                  <Button onClick={() => setShowWalletConnect(true)}>
+                    Connect wallet
+                  </Button>
+                )}
+                {activeAddress && (
+                  <span>
+                    {activeAddress.slice(0, 6)}...
+                    {activeAddress.slice(activeAddress.length - 3)}
+                  </span>
+                )}
+              </div>
             </div>
 
             <div className="flex items-center gap-4">
@@ -94,28 +128,30 @@ function RegisterPage() {
           />
         </div>
 
-        <div className="text-white space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-4xl font-bold leading-tight">
+        <div className="flex flex-col items-center text-white space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-[34px] font-bold font-goodtiming ">
               Connect Your Wallet to Get started
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              A social platform where creators own their content and earn
-              rewards for every like, comment, and share. Built for the Web3
-              era.
-            </p>
+            <div className="bg-[#28282880] p-6 rounded-full">
+              <p className="text-white font-sans text-[19px] p-2 text-sm leading-relaxed">
+                A social platform where creators own their content and earn
+                rewards for every like, comment, and share. Built for the Web3
+                era.
+              </p>
+            </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="w-full space-y-4">
             <button
-              className="w-full py-4 rounded-xl border-2 border-orange-500 text-orange-500 font-semibold text-lg hover:bg-orange-500 hover:text-white transition-all duration-200"
+              className="font-sans w-full py-4 rounded-xl border-2 bg-[#FB85011A] border-[#FB8500] text-[#FB8500] font-semibold text-lg hover:bg-orange-500 hover:text-white transition-all duration-200"
               onClick={() => alert("Wallet connection coming soon!")}
             >
               Connect Wallet
             </button>
 
             <button
-              className="w-full py-4 rounded-xl bg-white text-gray-700 font-semibold text-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-3"
+              className="font-sans w-full py-4 rounded-xl bg-white text-gray-700 text-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-10"
               onClick={() => alert("Google authentication coming soon!")}
             >
               <svg
