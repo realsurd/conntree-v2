@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-import styles from './index.module.scss';
-import classNames from 'classnames';
+import { ReactNode } from "react";
 
 interface BackgroundOverlayProps {
   children?: ReactNode;
@@ -15,14 +13,26 @@ export const BackgroundOverlay = ({
   children = <></>,
   visible = true,
   onClose = () => null,
-  className,
+  className = "",
   overlayStyle,
   wrapperStyle = {},
 }: BackgroundOverlayProps) => {
-  return visible ? (
-    <div className={classNames(styles['wrapper'], className)} style={wrapperStyle}>
-      <div className={styles['overlay']} onClick={onClose} style={overlayStyle}></div>
-      {children}
+  if (!visible) return null;
+
+  return (
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center ${className}`}
+      style={wrapperStyle}
+    >
+      {/* Overlay background */}
+      <div
+        className="absolute inset-0 bg-black/25 backdrop-blur-sm z-0"
+        onClick={onClose}
+        style={overlayStyle}
+      />
+
+      {/* Modal content */}
+      <div className="relative z-10">{children}</div>
     </div>
-  ) : null;
+  );
 };

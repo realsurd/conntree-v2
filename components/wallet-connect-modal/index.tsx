@@ -18,6 +18,8 @@ export const WalletConnectModal = ({ onClose }: Props) => {
     }
   }, [activeAddress]);
 
+  console.log(wallets);
+
   return (
     <BackgroundOverlay onClose={onClose}>
       <div className={styles.container}>

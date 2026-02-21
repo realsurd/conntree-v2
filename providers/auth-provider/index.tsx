@@ -4,7 +4,7 @@ import { authAtom } from "@/state";
 import { useWallet } from "@txnlab/use-wallet";
 import { ReactNode, useEffect, useState } from "react";
 import { useSetRecoilState } from "recoil";
-// import { AuthLoader } from './loader';
+import { AuthLoader } from "./loader";
 
 interface Props {
   children: ReactNode;
@@ -49,9 +49,11 @@ export const AuthProvider = ({ children }: Props) => {
     }
   };
 
-  // useEffect(() => {
-  //   checkAuth();
-  // }, []);
+  useEffect(() => {
+    (async () => {
+      checkAuth();
+    })();
+  }, []);
 
-  // return loading ? <AuthLoader /> : <>{children}</>;
+  return loading ? <AuthLoader /> : <>{children}</>;
 };

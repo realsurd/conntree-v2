@@ -13,6 +13,7 @@ module.exports = {
       },
       animation: {
         "rotate-slow": "rotateSlow 90s linear infinite",
+        "rotate-fast": "rotateSlow 30s linear infinite",
       },
     },
   },

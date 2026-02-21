@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Wallet } from "lucide-react";
+// import { Wallet } from "lucide-react";
 import RotatingBackground from "@/components/rotating-background";
 
 function SignIn() {

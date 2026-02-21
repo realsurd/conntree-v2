@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+// import { Geist, Geist_Mono } from "next/font/google";
+// import localFont from "next/font/local";
 import "./globals.css";
+import { WalletConnectProvider } from "@/providers/wallet-connect-provider";
 import RecoilContextProvider from "@/providers/recoil-provider";
-import { WalletConnectProvider } from "@/providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const goodTiming = localFont({
-  src: "./fonts/good-timing-bd.otf",
-  variable: "--font-good-timing",
-});
+// const goodTiming = localFont({
+//   src: " ./fonts/good-timing/good-timing-bd.otf",
+//   variable: "--font-good-timing",
+// });
 
 export const metadata: Metadata = {
   title: "Conntree",
@@ -32,9 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${goodTiming.variable} antialiased`}
-      >
+      <body>
+        {/* <body className={`${goodTiming.variable} antialiased`}></body> */}
         <RecoilContextProvider>
           <WalletConnectProvider>{children}</WalletConnectProvider>
         </RecoilContextProvider>

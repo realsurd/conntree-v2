@@ -1,5 +1,7 @@
-// import HeroSection from "@/features/home/landing-page-components/hero-section";
-
-// export const AuthLoader = () => {
-//   return <HeroSection />;
-// };
+export const AuthLoader = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <p>Loading...</p>
+    </div>
+  );
+};
