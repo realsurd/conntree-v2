@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
 import { WalletConnectProvider } from "@/providers/wallet-connect-provider";
 import RecoilContextProvider from "@/providers/recoil-provider";
+
+import Header from "@/components/header";
+import Sidebar from "@/components/sidebar";
 
 const goodTiming = localFont({
   src: "./fonts/good-timing/good-timing-bd.otf",
@@ -22,9 +25,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${goodTiming.variable} antialiased`}>
+      <body
+        className={`${goodTiming.variable} antialiased bg-[#0A1117] text-white`}
+      >
         <RecoilContextProvider>
-          <WalletConnectProvider>{children}</WalletConnectProvider>
+          <WalletConnectProvider>
+            <div className="flex flex-col h-screen overflow-hidden">
+              {/* Header full width */}
+              <Header />
+
+              <div className="flex flex-1 overflow-hidden">
+                {/* Sidebar on the left */}
+                <Sidebar />
+
+                {/* Page Content */}
+                <main className="flex-1 overflow-y-auto p-6">{children}</main>
+              </div>
+            </div>
+          </WalletConnectProvider>
         </RecoilContextProvider>
       </body>
     </html>
