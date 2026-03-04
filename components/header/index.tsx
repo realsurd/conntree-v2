@@ -33,7 +33,7 @@ const Header = () => {
 
         {/* Button */}
         <Link href="/auth/register">
-          <button className="bg-[#FB8500] px-6 py-3 rounded-lg font-medium">
+          <button className="bg-[#FB8500] px-12 py-3 rounded-lg font-medium">
             Get Started
           </button>
         </Link>

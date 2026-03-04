@@ -4,6 +4,7 @@ import React from "react";
 import { Home, Bell, Plus, MessageCircle, User } from "lucide-react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { SiAlgorand } from "react-icons/si";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -49,31 +50,41 @@ const Sidebar = () => {
 
       {/* Navigation */}
       <nav className="flex flex-col gap-6 text-gray-300">
-        <div className="flex items-center gap-3 text-[#FB8500] cursor-pointer">
-          <Home size={20} />
-          <span>Home</span>
-        </div>
+        <Link href="/">
+          <div className="flex items-center gap-3 text-[#FB8500] cursor-pointer">
+            <Home size={20} />
+            <span>Home</span>
+          </div>
+        </Link>
 
-        <div className="flex items-center gap-3 hover:text-white cursor-pointer">
-          <Bell size={20} />
-          <span>Notifications</span>
-          <span className="w-2 h-2 bg-orange-500 rounded-full ml-auto" />
-        </div>
+        <Link href="/notifications">
+          <div className="flex items-center gap-3 hover:text-white cursor-pointer">
+            <Bell size={20} />
+            <span>Notifications</span>
+            <span className="w-2 h-2 bg-orange-500 rounded-full ml-auto" />
+          </div>
+        </Link>
 
-        <div className="flex items-center gap-3 hover:text-white cursor-pointer">
-          <Plus size={20} />
-          <span>Create</span>
-        </div>
+        <Link href="/create">
+          <div className="flex items-center gap-3 hover:text-white cursor-pointer">
+            <Plus size={20} />
+            <span>Create</span>
+          </div>
+        </Link>
 
-        <div className="flex items-center gap-3 hover:text-white cursor-pointer">
-          <MessageCircle size={20} />
-          <span>Messages</span>
-        </div>
+        <Link href="/messages">
+          <div className="flex items-center gap-3 hover:text-white cursor-pointer">
+            <MessageCircle size={20} />
+            <span>Messages</span>
+          </div>
+        </Link>
 
-        <div className="flex items-center gap-3 hover:text-white cursor-pointer">
-          <User size={20} />
-          <span>Profile</span>
-        </div>
+        <Link href="/profile">
+          <div className="flex items-center gap-3 hover:text-white cursor-pointer">
+            <User size={20} />
+            <span>Profile</span>
+          </div>
+        </Link>
       </nav>
     </div>
   );
