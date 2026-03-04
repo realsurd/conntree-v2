@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
 import { WalletConnectProvider } from "@/providers/wallet-connect-provider";
 import RecoilContextProvider from "@/providers/recoil-provider";
+
+import Header from "@/components/header";
+import Sidebar from "@/components/sidebar";
 
 const goodTiming = localFont({
   src: "./fonts/good-timing/good-timing-bd.otf",
@@ -17,12 +20,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${goodTiming.variable} antialiased`}>
+      <body
+        className={`${goodTiming.variable} antialiased bg-[#0A1117] text-white`}
+      >
         <RecoilContextProvider>
           <WalletConnectProvider>{children}</WalletConnectProvider>
         </RecoilContextProvider>

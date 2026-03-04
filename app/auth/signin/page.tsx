@@ -3,6 +3,7 @@
 import { useState } from "react";
 // import { Wallet } from "lucide-react";
 import RotatingBackground from "@/components/rotating-background";
+import Link from "next/link";
 
 function SignIn() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -143,12 +144,11 @@ function SignIn() {
 
           <div className="text-center">
             <span className="text-gray-400">Don’t have an account? </span>
-            <button
-              className="text-orange-500 font-semibold hover:text-orange-400 transition-colors"
-              onClick={() => alert("Sign in page coming soon!")}
-            >
-              Create now{" "}
-            </button>
+            <Link href="/auth/register">
+              <button className="text-orange-400 font-semibold transition-colors">
+                Create now{" "}
+              </button>
+            </Link>
           </div>
         </div>
       </div>

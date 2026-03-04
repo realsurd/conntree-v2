@@ -5,6 +5,7 @@ import RotatingBackground from "@/components/rotating-background";
 import { WalletConnectModal } from "@/components/wallet-connect-modal";
 import AvatarCustomizer from "@/components/customized-avatars";
 import { useWallet } from "@txnlab/use-wallet";
+import Link from "next/link";
 
 function RegisterPage() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -161,6 +162,15 @@ function RegisterPage() {
               >
                 Continue with Google
               </button>
+
+              <div className="text-center">
+                <span className="text-gray-400">Already have an account? </span>
+                <Link href="/auth/signin">
+                  <button className="text-orange-400 font-semibold transition-colors">
+                    Sign in
+                  </button>
+                </Link>
+              </div>
             </div>
           )}
         </div>
