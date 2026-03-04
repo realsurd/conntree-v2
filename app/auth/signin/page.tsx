@@ -125,7 +125,11 @@ function SignIn() {
                   <span className="text-[#B5ED30]"> Special Character.</span>
                 </p>
 
-                <div className="py-10">Forgot Password? </div>
+                <Link href="/auth/forgot-password">
+                  <div className="py-10 text-orange-400 hover:underline">
+                    Forgot Password?
+                  </div>
+                </Link>
                 <button
                   type="submit"
                   className="w-full py-3 rounded-lg bg-[#FB8500] text-white font-semibold transition-colors"
