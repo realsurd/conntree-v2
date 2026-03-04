@@ -88,14 +88,14 @@ function ForgotPassword() {
               </div>
             ) : (
               <div className="space-y-4">
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  A password reset link has been sent to{" "}
-                  <span className="text-[#B5ED30]">{email}</span>. Please check
-                  your inbox and follow the instructions.
+                <p className="text-gray-300 bg-[#28282880] p-5 rounded-full text-[20px] leading-relaxed">
+                  Enter the code sent to{" "}
+                  <span className="text-[#B5ED30]">{email}</span> to reset your
+                  password.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="w-full py-3 rounded-lg bg-[#FB8500] text-white font-semibold transition-colors hover:bg-[#e07800]"
+                  className="w-full py-3 rounded-lg bg-[#B5ED30] text-white font-semibold transition-colors"
                 >
                   Resend Link
                 </button>
@@ -103,9 +103,9 @@ function ForgotPassword() {
                 {/* Confirm password was updated — triggers the modal */}
                 <button
                   onClick={handlePasswordUpdateSuccess}
-                  className="w-full py-3 rounded-lg border border-[#B5ED30] text-[#B5ED30] font-semibold transition-colors hover:bg-[#B5ED30]/10"
+                  className="w-full py-3 rounded-lg bg-[#FB8500] text-white font-semibold transition-colors"
                 >
-                  I've Updated My Password
+                  Continue
                 </button>
               </div>
             )}
