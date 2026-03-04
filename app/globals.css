@@ -32,3 +32,32 @@ body {
 .animate-rotate {
   animation: rotate 8s linear infinite;
 }
+
+/* ============================= */
+/* Custom Scrollbar */
+/* ============================= */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2a33;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e3b46;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1f2a33 #0a1117;
+}
