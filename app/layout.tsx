@@ -5,9 +5,6 @@ import "./globals.css";
 import { WalletConnectProvider } from "@/providers/wallet-connect-provider";
 import RecoilContextProvider from "@/providers/recoil-provider";
 
-import Header from "@/components/header";
-import Sidebar from "@/components/sidebar";
-
 const goodTiming = localFont({
   src: "./fonts/good-timing/good-timing-bd.otf",
   variable: "--font-good-timing",

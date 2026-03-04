@@ -30,7 +30,6 @@ function RegisterPage() {
   const handleGoogleSignup = () => {
     if (!walletConnected) return;
 
-    // Simulate Google success
     setGoogleSignedUp(true);
     setCurrentStep(3);
   };
@@ -123,9 +122,9 @@ function RegisterPage() {
 
             <div className="bg-[#28282880] p-3 rounded-full">
               <p className="text-white font-sans text-[20px] p-2 text-sm leading-relaxed">
-                A social platform where creators own their content and earn
-                rewards for every like, comment, and share. Built for the Web3
-                era.
+                {googleSignedUp
+                  ? "Choose how you appear in Conntree! Personalize your avatar with unique styles."
+                  : "A social platform where creators own their content and earn rewards for every like, comment, and share. Built for the Web3 era."}
               </p>
             </div>
           </div>
