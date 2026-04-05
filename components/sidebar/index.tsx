@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { TbUsersGroup } from "react-icons/tb";
 
 import { Home, Bell, Plus, MessageCircle, User } from "lucide-react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
@@ -8,7 +9,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="w-80 border-white/10 py-5 px-20 flex flex-col">
+    <div className="w-72 px-10   border-white/10 py-5 flex flex-col">
       {/* Profile Section */}
       <div className="flex items-center gap-4 mb-6">
         <img
@@ -20,12 +21,12 @@ const Sidebar = () => {
         />
         <div>
           <div className="flex items-center gap-2">
-            <h3 className="font-semibold">Ibromax..</h3>
+            <h3 className="font-semibold">RealSurd..</h3>
             <span className="text-[#FB8500]">
               <IoIosCheckmarkCircle />
             </span>
           </div>
-          <p className="text-[12px] text-gray-400">UI/UX Designer</p>
+          <p className="text-[12px] text-gray-400">Software Developer</p>
         </div>
       </div>
 
@@ -76,6 +77,13 @@ const Sidebar = () => {
           <div className="flex items-center gap-3 hover:text-white cursor-pointer">
             <MessageCircle size={20} />
             <span>Messages</span>
+          </div>
+        </Link>
+
+        <Link href="/communities">
+          <div className="flex items-center gap-3 hover:text-white cursor-pointer">
+            <TbUsersGroup size={20} />
+            <span>communities</span>
           </div>
         </Link>
 
