@@ -122,7 +122,6 @@ export default function NotificationsPage() {
 
   return (
     <>
-      {/* Outer parent container */}
       <div className="w-full h-full flex justify-center items-center">
         {/* Main dark card */}
         <div className="w-[705px] min-h-screen flex justify-center items-center flex-col bg-[#8ECAE61A] mt-auto py-10 rounded-lg opacity-100 ">
