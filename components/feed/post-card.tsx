@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AiOutlineHeart, AiOutlineComment } from "react-icons/ai";
 import { BiRepost } from "react-icons/bi";
 import { SiAlgorand } from "react-icons/si";
-import CommentBox from "../comment/comment-box";
+import CommentBox from "./comment/comment-box";
 
 interface Post {
   author: {
