@@ -22,7 +22,8 @@ export const posts: Post[] = [
     author: {
       name: "ConnTree",
       username: "ConnTreeHQ",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1772533292/image_2_kyhega.png",
       verified: true,
     },
     content:
@@ -42,7 +43,8 @@ export const posts: Post[] = [
     author: {
       name: "Bessie Cooper",
       username: "bessie.eth",
-      avatar: "/avatars/avatar1.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1774437630/902a4da6d363e7419862c6cc52a7d0fc4fcda463_mes9ee.png",
       verified: true,
     },
     content:
@@ -63,7 +65,8 @@ export const posts: Post[] = [
     author: {
       name: "Brahim Diaz",
       username: "brahim.web3",
-      avatar: "/avatars/avatar2.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562572/animoji_weqlnz.png",
     },
     content:
       "Tokenomics should reward patience, not hype. Building for the long term always wins.",
@@ -81,8 +84,9 @@ export const posts: Post[] = [
     id: "4",
     author: {
       name: "Sadiq",
-      username: "sadiq.builds",
-      avatar: "/avatars/avatar3.png",
+      username: "sadiqCNT",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1772456358/image_23_mfmeai.png",
       verified: true,
     },
     content:
@@ -99,7 +103,8 @@ export const posts: Post[] = [
     author: {
       name: "David",
       username: "davoritoons",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
       verified: true,
     },
     content: "I accept crypto too 🫢🫢☺️☺️.",
@@ -119,7 +124,8 @@ export const posts: Post[] = [
     author: {
       name: "Darvori",
       username: "davoritoons",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
       verified: true,
     },
     content: "I am new here on the space, I am coming fully loaded. 💯💯 ",
@@ -139,7 +145,8 @@ export const posts: Post[] = [
     author: {
       name: "Andi",
       username: "Handinomeric",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562431/Z9egUvZt_400x400_jvt9wx.jpg",
       verified: true,
     },
     content:
@@ -160,7 +167,8 @@ export const posts: Post[] = [
     author: {
       name: "Andi",
       username: "Handinomeric",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562431/Z9egUvZt_400x400_jvt9wx.jpg",
       verified: true,
     },
     content:
@@ -181,7 +189,8 @@ export const posts: Post[] = [
     author: {
       name: "Tom | UiUx Designer",
       username: "designwithtom",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562292/yVaPi9hr_400x400_zdfrvu.jpg",
       verified: true,
     },
     content:
@@ -203,7 +212,8 @@ export const posts: Post[] = [
     author: {
       name: "Tom | UiUx Designer",
       username: "designwithtom",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562292/yVaPi9hr_400x400_zdfrvu.jpg",
       verified: true,
     },
     content: "On seat… ",
@@ -223,7 +233,8 @@ export const posts: Post[] = [
     author: {
       name: "Tom | UiUx Designer",
       username: "designwithtom",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562292/yVaPi9hr_400x400_zdfrvu.jpg",
       verified: true,
     },
     content:
@@ -243,7 +254,8 @@ export const posts: Post[] = [
     author: {
       name: "Darvori",
       username: "davoritoons",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
       verified: true,
     },
     content:
@@ -263,7 +275,8 @@ export const posts: Post[] = [
     author: {
       name: "Darvori",
       username: "davoritoons",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
       verified: true,
     },
     content:
@@ -284,13 +297,90 @@ export const posts: Post[] = [
     author: {
       name: "Darvori",
       username: "davoritoons",
-      avatar: "/avatars/avatar3.png",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
       verified: true,
     },
     content:
       "My boys 😎 which one of these guys is your favorite. #jeet @HacsperLingoog @Charles_Fx16 @mhuxzitics @N1Fredy @onahcharles_ @Handinomeric @Garakazekag @BobbiAndrea_ZM @_Sammyp01 @KingDamilotun @king__ask",
     media: [
       "https://res.cloudinary.com/du153mzwk/image/upload/v1775343045/GuKVaU4WUAAOwJi_luiyf2.jpg",
+    ],
+    engagement: {
+      likes: 400,
+      comments: 410,
+      shares: 200,
+      reward: 0.12,
+    },
+  },
+
+  {
+    id: "15",
+    author: {
+      name: "Anjorin",
+      username: "cryp_Alchemist",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563039/3MYgzaxE_400x400_uk7vuu.jpg",
+      verified: true,
+    },
+    content: "Every serious trader will have an agent...",
+    engagement: {
+      likes: 400,
+      comments: 410,
+      shares: 200,
+      reward: 0.12,
+    },
+  },
+
+  {
+    id: "16",
+    author: {
+      name: "Anjorin",
+      username: "cryp_Alchemist",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563039/3MYgzaxE_400x400_uk7vuu.jpg",
+      verified: true,
+    },
+    content: "Teach them football and not that rugby they are playing",
+    engagement: {
+      likes: 400,
+      comments: 410,
+      shares: 200,
+      reward: 0.12,
+    },
+  },
+
+  {
+    id: "17",
+    author: {
+      name: "Anjorin",
+      username: "cryp_Alchemist",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563039/3MYgzaxE_400x400_uk7vuu.jpg",
+      verified: true,
+    },
+    content:
+      "Tonight, I set up an AI Agent as an LP on a prediction market I am NOT a developer Here's what I learned: • MCP gives AI agents hands to interact with the world • x402 gives AI agents a wallet to pay for things•  Together they are the foundation of the agent economy We are so early 🌍",
+    engagement: {
+      likes: 400,
+      comments: 410,
+      shares: 200,
+      reward: 0.12,
+    },
+  },
+  {
+    id: "18",
+    author: {
+      name: "DaoWakanda",
+      username: "DaoWakanda",
+      avatar:
+        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563771/FdFISPL__400x400_kv6a3j.jpg",
+      verified: true,
+    },
+    content:
+      "Participation = Power at Daowakanda. The People who secure & build get to decide. We’re evolving to validator-based, on-chain governance. By becoming a DAO Validator, you unlock proposal + voting rights. We’re aligning governance, power, and community value. The new Daowakanda is coming. Stay tuned. 🚀",
+    media: [
+      "https://res.cloudinary.com/du153mzwk/video/upload/v1775564161/122b734d-d6c3-46fb-a5c7-a9bc394a4075_mginhz.mov",
     ],
     engagement: {
       likes: 400,

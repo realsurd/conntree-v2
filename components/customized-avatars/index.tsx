@@ -4,9 +4,10 @@ import { useState, useRef } from "react";
 import { RiGalleryLine } from "react-icons/ri";
 import { FaUserCircle } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import router from "next/router";
 
 export default function AvatarCustomizer() {
+  const router = useRouter();
+
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -22,13 +23,22 @@ export default function AvatarCustomizer() {
     setSelectedImage(imageUrl);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      router.push("/");
+    }
+  };
+
   const handleSave = () => {
-    // For presentation: navigate to homepage
     router.push("/");
   };
 
   return (
-    <div className="w-full flex flex-col items-center text-white space-y-2">
+    <div
+      className="w-full flex flex-col items-center text-white space-y-2"
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+    >
       {/* TOP TABS */}
       <div className="flex items-center gap-10 text-lg font-medium">
         <div className="flex items-center gap-2 text-gray-400">
