@@ -25,7 +25,7 @@ const DisconnectWallet: React.FC<DisconnectWalletProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#8ECAE61A] py-6 px-6 rounded-2xl w-full min-h-[180px] space-y-6 mt-2">
+    <div className="flex flex-col items-center justify-center bg-[#8ECAE61A] backdrop-blur-md py-6 px-6 rounded-2xl w-full max-w-[320px] min-h-[180px] space-y-6 mt-2">
       <h1 className="text-white text-center text-lg font-sans font-semibold">
         Algorand Network
       </h1>

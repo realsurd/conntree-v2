@@ -2,13 +2,12 @@ import React, { useRef, useState } from "react";
 import { VscSend } from "react-icons/vsc";
 import { GrGallery } from "react-icons/gr";
 import { IoIosClose } from "react-icons/io";
-import { FaGun } from "react-icons/fa6";
 
-interface CommentBoxProps {
+interface CommentReplyProps {
   onSend?: (data: { text: string; image?: File }) => void;
 }
 
-const CommentBox = ({ onSend }: CommentBoxProps) => {
+const CommentReply = ({ onSend }: CommentReplyProps) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const [text, setText] = useState("");
@@ -46,7 +45,7 @@ const CommentBox = ({ onSend }: CommentBoxProps) => {
   };
 
   return (
-    <div className="flex flex-col gap-2 p-3 border-b border-white/30">
+    <div className="flex flex-col border-b border-white/30">
       {/* Image Preview */}
       {image && (
         <div className="relative w-20 h-20 rounded-lg overflow-hidden border border-white/10">
@@ -69,9 +68,9 @@ const CommentBox = ({ onSend }: CommentBoxProps) => {
       <div className="flex items-center gap-3">
         {/* Avatar */}
         <img
-          src="/avatars/avatar1.png"
+          src="https://res.cloudinary.com/du153mzwk/image/upload/v1772456358/image_23_mfmeai.png"
           alt="user avatar"
-          className="w-8 h-8 rounded-full object-cover"
+          className="w-7 h-7 rounded-full object-cover"
         />
 
         {/* Input */}
@@ -89,7 +88,7 @@ const CommentBox = ({ onSend }: CommentBoxProps) => {
               {/* Send */}
               <VscSend
                 onClick={handleSend}
-                className="text-2xl text-[#FB8500] cursor-pointer"
+                className="text-lg text-[#FB8500] cursor-pointer"
               />
 
               {/* Gallery */}
@@ -114,4 +113,4 @@ const CommentBox = ({ onSend }: CommentBoxProps) => {
   );
 };
 
-export default CommentBox;
+export default CommentReply;

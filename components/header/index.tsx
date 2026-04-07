@@ -36,35 +36,39 @@ const Header = () => {
   };
 
   return (
-    <header className="h-20 px-8 md:px-20 border-b border-white/10 flex items-center justify-between relative">
+    <header className="h-20 px-10 border-b border-white/10 flex items-center justify-between relative">
       {/* Logo */}
-      <div className="flex items-center gap-2">
-        <img
-          src="https://res.cloudinary.com/du153mzwk/image/upload/v1772533292/image_2_kyhega.png"
-          alt="ConnTree Logo"
-          width={45}
-          height={45}
-        />
-        <h1 className="text-3xl font-goodtiming font-semibold">Conntree</h1>
-      </div>
+      <Link href="/" className="flex items-center gap-2">
+        <div className="flex items-center gap-2 cursor-pointer">
+          <img
+            src="https://res.cloudinary.com/du153mzwk/image/upload/v1775583122/Group_481425_lmh71y.png"
+            alt="ConnTree Logo"
+            width={45}
+            height={45}
+          />
+          <h1 className="text-3xl font-goodtiming font-bold">
+            Conn<span className="text-[#FB8500]">tree</span>
+          </h1>
+        </div>
+      </Link>
 
       {/* Search + Wallet */}
-      <div className="flex justify-between items-center gap-4 md:gap-10 relative">
-        <div className="relative flex-1 max-w-[700px]">
+      <div className="flex items-center gap-4 w-full max-w-4xl">
+        <div className="relative flex-1">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
           <input
             type="text"
             placeholder="Search"
-            className="w-full bg-[#0E1C28] rounded-md pl-10 pr-4 py-3 text-sm outline-none border border-white/10 focus:border-[#FB8500]"
+            className="w-[95%] bg-[#0E1C28] rounded-2xl pl-10 pr-4 py-3 text-sm outline-none border border-white/10 focus:border-[#FB8500]"
           />
         </div>
 
         {/* Wallet / Get Started */}
         {activeAccount ? (
-          <div className="relative w-full max-w-xs" ref={menuRef}>
+          <div className="relative shrink-0" ref={menuRef}>
             {/* Connected Wallet Button */}
-            <div className="w-full flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-white bg-gradient-to-r from-[#A055FF] to-[#DA8CFF] cursor-pointer hover:opacity-90 transition">
-              <span className="text-sm md:text-base">
+            <div className="flex items-center justify-between gap-2 px-4 py-2 rounded-2xl font-medium text-white border bg-[#292118] border-[#FB8501] cursor-pointer hover:opacity-90 transition w-fit min-w-[180px]">
+              <span className="text-sm md:text-lg font-opensans">
                 {formatAddress(activeAccount.address)}
               </span>
               <span
@@ -84,7 +88,7 @@ const Header = () => {
 
             {/* Wallet Menu Modal */}
             {showWalletMenu && (
-              <div className="absolute top-full left-0 mt-2 w-full rounded-lg shadow-lg z-50">
+              <div className="absolute top-full right-0 mt-2 w-[320px] rounded-lg shadow-lg z-50">
                 <DisconnectWallet onClose={() => setShowWalletMenu(false)} />
               </div>
             )}
@@ -101,7 +105,7 @@ const Header = () => {
 
       {/* Copy Toast */}
       {showToast && (
-        <div className="absolute right-8 top-24 bg-gradient-to-r from-[#A055FF] to-[#DA8CFF] backdrop-blur-md text-white px-4 py-2 rounded-lg shadow-lg text-sm animate-fadeIn">
+        <div className="absolute right-8 top-24 z-50 bg-[#FB8500] backdrop-blur-md text-white px-4 py-2 rounded-lg shadow-lg text-sm animate-fadeIn">
           Wallet copied ✓
         </div>
       )}

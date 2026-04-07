@@ -110,7 +110,7 @@ function RegisterPage() {
         </div>
 
         {/* RIGHT PANEL */}
-        <div className="flex flex-col items-center text-white space-y-8 pt-10 px-[100px]">
+        <div className="flex flex-col items-center  font-goodtiming text-white space-y-8 pt-10 px-[100px]">
           <div className="text-center space-y-4">
             <h2 className="text-[38px] font-bold">
               {!walletConnected

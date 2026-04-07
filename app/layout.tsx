@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { PageMaxWidth } from "@/components/page-max-width";
 
 import { WalletConnectProvider } from "@/providers/wallet-connect-provider";
 import RecoilContextProvider from "@/providers/recoil-provider";
