@@ -1,14 +1,8 @@
 export default function CreatePost() {
   return (
-    // ─── Page Background ───────────────────────────────────────────────────────
-    <div className="min-h-screen bg-black flex flex-col items-center px-4 pt-10 pb-4">
+    <div className="w-full h-full flex flex-col px-20 py-5 gap-5">
+      <h1 className=" font-goodtiming font-bold text-2xl">Create a Post</h1>
 
-      {/* ─── Section Title ───────────────────────────────────────────────────── */}
-      <h1 className="self-start ml-[calc(50%-310px)] text-white text-2xl font-bold mb-4 tracking-wide font-goodtiming">
-        Create a Post
-      </h1>
-
-      {/* ─── Card / Parent Container ─────────────────────────────────────────── */}
       <div
         className="w-[626px]
                    pt-6 pr-8 pb-10 pl-8
@@ -95,3 +89,6 @@ export default function CreatePost() {
     </div>
   );
 }
+   
+
+export default CreatePost;

@@ -33,7 +33,7 @@ export const AuthWrapper = async ({ children }: Props) => {
       }
     }
 
-    redirect('/auth/log-in');
+    redirect('/auth/signin');
   };
 
   const token = await validateAuth();
