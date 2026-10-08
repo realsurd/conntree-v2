@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React from "react";
 
 import Image from "next/image";
 import {
@@ -51,7 +51,7 @@ const messages = [
 
 const Message = () => {
   return (
-     <section className="flex min-h-[calc(100vh-72px)] flex-1 gap-2 px-4 pb-6 pt-3 text-white">
+    <section className="flex min-h-[calc(100vh-72px)] flex-1 gap-2 px-4 pb-6 pt-3 text-white">
       {/* Message list */}
       <aside className="w-[320px] rounded-xl border border-white/5 bg-[#0d1a23] p-4">
         <div className="mb-5 flex items-center justify-between">
@@ -140,7 +140,7 @@ const Message = () => {
 
         <div className="flex-1 space-y-6 px-6 py-5">
           <div className="mx-auto w-fit rounded-full border border-white/15 px-5 py-2 text-xs text-white/60">
-            Today
+            Today's date
           </div>
 
           {messages.map((message) => (
@@ -199,8 +199,8 @@ const Message = () => {
         </div>
       </section>
     </section>
-  )
-}
+  );
+};
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
@@ -211,4 +211,4 @@ function Stat({ value, label }: { value: string; label: string }) {
   );
 }
 
-export default Message
+export default Message;
