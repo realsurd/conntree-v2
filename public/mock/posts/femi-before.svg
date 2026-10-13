@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+<rect width="800" height="1000" fill="#E6EDF2"/>
+  <rect x="196" y="98" width="408" height="804" rx="56" fill="#023047"/>
+  <rect x="212" y="114" width="376" height="772" rx="42" fill="#FFFFFF"/>
+  <clipPath id="screen"><rect x="212" y="114" width="376" height="772" rx="42"/></clipPath>
+  <g clip-path="url(#screen)">
+    <rect x="212" y="114" width="376" height="112" fill="#FB8500"/>
+    <rect x="232" y="176" width="150" height="30" rx="6" fill="#FFFFFF"/>
+    <rect x="398" y="170" width="78" height="42" rx="6" fill="#023047"/>
+    <rect x="486" y="182" width="88" height="24" rx="6" fill="#FFB703"/>
+    <rect x="226" y="240" width="172" height="150" rx="8" fill="#E76F51"/>
+    <rect x="404" y="252" width="176" height="96" rx="8" fill="#219EBC"/>
+    <rect x="412" y="356" width="120" height="46" rx="8" fill="#B5ED30"/>
+    <rect x="240" y="404" width="310" height="16" rx="4" fill="#023047"/>
+    <rect x="226" y="428" width="250" height="12" rx="4" fill="#314654"/>
+    <rect x="252" y="446" width="300" height="12" rx="4" fill="#314654"/>
+    <rect x="232" y="464" width="190" height="12" rx="4" fill="#314654"/>
+    <rect x="226" y="492" width="110" height="110" rx="8" fill="#FFB703"/>
+    <rect x="344" y="500" width="120" height="90" rx="8" fill="#8ECAE6"/>
+    <rect x="472" y="486" width="104" height="126" rx="8" fill="#52B788"/>
+    <rect x="236" y="620" width="330" height="14" rx="4" fill="#023047"/>
+    <rect x="226" y="642" width="200" height="12" rx="4" fill="#314654"/>
+    <rect x="262" y="660" width="280" height="12" rx="4" fill="#314654"/>
+    <rect x="226" y="694" width="120" height="50" rx="6" fill="#E76F51"/>
+    <rect x="354" y="700" width="104" height="40" rx="20" fill="#219EBC"/>
+    <rect x="466" y="690" width="112" height="58" rx="6" fill="#FB8500"/>
+    <rect x="232" y="766" width="340" height="12" rx="4" fill="#314654"/>
+    <rect x="248" y="784" width="230" height="12" rx="4" fill="#314654"/>
+    <rect x="226" y="812" width="352" height="60" rx="6" fill="#FFB703"/></g>
+  <rect x="352" y="128" width="96" height="14" rx="7" fill="#023047"/><circle cx="112" cy="112" r="50" fill="#E76F51"/><path d="M92 92 l40 40 M132 92 l-40 40" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+</svg>

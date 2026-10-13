@@ -35,7 +35,6 @@ const CommentReply = ({ onSend }: CommentReplyProps) => {
       ...(image && { image }),
     };
 
-    console.log("Sending comment:", payload);
     onSend?.(payload);
 
     // reset

@@ -4,6 +4,10 @@ import React from "react";
 import { SiAlgorand } from "react-icons/si";
 import { VscDebugDisconnect } from "react-icons/vsc";
 import { useWallet } from "@txnlab/use-wallet";
+import {
+  formatAlgo,
+  useWalletBalance,
+} from "@/providers/wallet-balance-provider";
 
 interface DisconnectWalletProps {
   onClose?: () => void;
@@ -11,6 +15,7 @@ interface DisconnectWalletProps {
 
 const DisconnectWallet: React.FC<DisconnectWalletProps> = ({ onClose }) => {
   const { providers: wallets } = useWallet();
+  const balance = useWalletBalance();
 
   const handleDisconnect = async () => {
     // Disconnect all wallet providers
@@ -30,8 +35,16 @@ const DisconnectWallet: React.FC<DisconnectWalletProps> = ({ onClose }) => {
         Algorand Network
       </h1>
 
-      <p className="flex items-center gap-2 text-white font-semibold text-md">
-        0.52
+      {/* ALGO balance of the connected wallet; a grey bar while it loads */}
+      <p
+        className="flex items-center gap-2 text-white font-semibold"
+        title={balance.error ? "Could not load the latest balance" : undefined}
+      >
+        {balance.loading ? (
+          <span className="h-5 w-16 rounded bg-white/10 animate-pulse" />
+        ) : (
+          formatAlgo(balance.microAlgos)
+        )}
         <span className="bg-[#8ECAE61A] rounded-full p-3 flex items-center justify-center">
           <SiAlgorand size={20} />
         </span>

@@ -3,11 +3,7 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className="bg-[#07121C] min-h-screen overflow-y-auto">
-        {children}
-      </body>
-    </html>
-  );
+  // The root layout (app/layout.tsx) already renders <html> and <body>.
+  // A nested layout must not render them again.
+  return <div className="bg-[#07121C] min-h-screen">{children}</div>;
 }

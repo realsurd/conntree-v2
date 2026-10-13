@@ -5,24 +5,9 @@ import { BiRepost } from "react-icons/bi";
 import { SiAlgorand } from "react-icons/si";
 import CommentBox from "./comment/comment-box";
 import { useRouter } from "next/navigation";
+import type { Post } from "@/lib/data/post";
 
-interface Post {
-  author: {
-    avatar: string;
-    name: string;
-    username: string;
-  };
-  content: string;
-  media?: string[];
-  engagement: {
-    likes: number;
-    comments: number;
-    shares: number;
-    reward: number;
-  };
-}
-
-const PostCard = ({ post }: { post: any }) => {
+const PostCard = ({ post }: { post: Post }) => {
   const [expanded, setExpanded] = useState(false);
 
   const CHARACTER_LIMIT = 150;
@@ -45,7 +30,6 @@ const PostCard = ({ post }: { post: any }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    sessionStorage.setItem("feed-scroll", window.scrollY.toString());
     router.push(`/feed/${post.id}`);
   };
 
@@ -54,7 +38,11 @@ const PostCard = ({ post }: { post: any }) => {
       <div className="w-full text-white rounded-2xl p-6 space-y-6 border border-white/10">
         {/* Header */}
         <div className="flex items-center gap-3">
-          <img src={post.author.avatar} className="w-10 h-10 rounded-full" />
+          <img
+            src={post.author.avatar}
+            alt={`${post.author.name}'s avatar`}
+            className="w-10 h-10 rounded-full"
+          />
 
           <div className="flex flex-1 items-center justify-between">
             {/* Name + Username */}
@@ -63,8 +51,12 @@ const PostCard = ({ post }: { post: any }) => {
               <p className="text-xs text-white/60">@{post.author.username}</p>
             </div>
 
-            {/* Follow Button */}
-            <button className="text-[10px] font-bold border border-[#FB8500] text-[#FB8500] px-1 rounded-full flex items-center gap-1">
+            {/* Follow Button (stop: a click here must not open the post) */}
+            <button
+              type="button"
+              onClick={stop}
+              className="text-[10px] font-bold border border-[#FB8500] text-[#FB8500] px-1 rounded-full flex items-center gap-1"
+            >
               Follow
             </button>
           </div>
@@ -169,7 +161,12 @@ const PostCard = ({ post }: { post: any }) => {
           </span>
         </div>
 
-        {showCommentBox && <CommentBox />}
+        {/* stop: typing or clicking in the comment box must not open the post */}
+        {showCommentBox && (
+          <div onClick={stop} className="cursor-auto">
+            <CommentBox />
+          </div>
+        )}
       </div>
     </div>
   );

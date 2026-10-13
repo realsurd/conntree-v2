@@ -16,6 +16,9 @@ export type Post = {
   };
 };
 
+// Mock feed data, used until posts come from the backend.
+// ConnTree's account and Sadiq's are real. Every other account is made up, and
+// the avatars, images and clips under /mock were drawn for this file.
 export const posts: Post[] = [
   {
     id: "1",
@@ -27,7 +30,7 @@ export const posts: Post[] = [
       verified: true,
     },
     content:
-      "Welcome to ConnTree 🌱A new kind of social space where your voice isn’t just heard — it’s valued. Here, creators don’t chase algorithms. Communities grow organically. And every post, idea, and interaction has real meaning.ConnTree was built for those who believe the internet should empower people, not exploit them. Create. Connect. Earn. 🌍This is just the beginning. #ConnTree #Web3 #Creators #Decentralized #BuildInPublic",
+      "Welcome to ConnTree 🌱 A new kind of social space where your voice isn’t just heard — it’s valued. Here, creators don’t chase algorithms. Communities grow organically. And every post, idea, and interaction has real meaning. ConnTree was built for those who believe the internet should empower people, not exploit them. Create. Connect. Earn. 🌍 This is just the beginning. #ConnTree #Web3 #Creators #Decentralized #BuildInPublic",
     media: [
       "https://res.cloudinary.com/du153mzwk/image/upload/v1775002138/ChatGPT_Image_Apr_1_2026_01_07_55_AM_zhq15o.png",
     ],
@@ -63,8 +66,8 @@ export const posts: Post[] = [
   {
     id: "3",
     author: {
-      name: "Brahim Diaz",
-      username: "brahim.web3",
+      name: "Jordan Kim",
+      username: "jordan.web3",
       avatar:
         "https://res.cloudinary.com/du153mzwk/image/upload/v1775562572/animoji_weqlnz.png",
     },
@@ -101,292 +104,247 @@ export const posts: Post[] = [
   {
     id: "5",
     author: {
-      name: "David",
-      username: "davoritoons",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
+      name: "Zuri",
+      username: "zuri.animates",
+      avatar: "/mock/avatars/zuri.svg",
       verified: true,
     },
-    content: "I accept crypto too 🫢🫢☺️☺️.",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1774860302/davori_flxlyd.jpg",
-    ],
+    content:
+      "Commissions are open again. Stickers, mascots, profile characters. And yes, I take ALGO. 😌",
+    media: ["/mock/posts/zuri-commissions.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 1840,
+      comments: 96,
+      shares: 212,
+      reward: 0.42,
     },
   },
-
   {
     id: "6",
     author: {
-      name: "Darvori",
-      username: "davoritoons",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
+      name: "Zuri",
+      username: "zuri.animates",
+      avatar: "/mock/avatars/zuri.svg",
       verified: true,
     },
-    content: "I am new here on the space, I am coming fully loaded. 💯💯 ",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/video/upload/v1774861127/davori2_ffbxm9.mp4",
-    ],
+    content: "New here, and I did not come empty-handed. First loop is up. 🌱",
+    media: ["/mock/posts/zuri-seedling.mp4"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 932,
+      comments: 41,
+      shares: 77,
+      reward: 0.18,
     },
   },
-
   {
     id: "7",
     author: {
-      name: "Andi",
-      username: "Handinomeric",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562431/Z9egUvZt_400x400_jvt9wx.jpg",
+      name: "Ada",
+      username: "ada.onchain",
+      avatar: "/mock/avatars/ada.svg",
       verified: true,
     },
     content:
-      "Most people walk into crypto looking at charts. Green candles, red candles, hype, fear. Price becomes the loudest signal. But the real revolution of blockchain has never been about how high a token can go—it’s about what becomes possible when no one needs to grant you access. ",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775338518/HEpnkrKWcAAlPeT_tifdyr.jpg",
-    ],
+      "Everyone asks what a token is worth. Fewer people ask what it lets you do. The useful part of this technology is almost boring: a record that nobody can quietly edit, and a payment that needs nobody’s permission. Price is the headline. Ownership is the story.",
+    media: ["/mock/posts/ada-records.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 5120,
+      comments: 318,
+      shares: 1240,
+      reward: 1.35,
     },
   },
-
   {
     id: "8",
     author: {
-      name: "Andi",
-      username: "Handinomeric",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562431/Z9egUvZt_400x400_jvt9wx.jpg",
+      name: "Ada",
+      username: "ada.onchain",
+      avatar: "/mock/avatars/ada.svg",
       verified: true,
     },
     content:
-      "We Avalanche (but not the snow fall😏) The Avalanche Blockchain makes me remember a popular quote often attributed to Robert Ingersoll which says: “We rise by lifting others.” Truth be told, If you want to go fast, go alone. If you want to go far, go together🤝 ",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775338959/HDCjwuRXcAACuAC_yeuazb.jpg",
-    ],
+      "Three months of building in public taught me one thing. The people who reply to your worst drafts are the ones who make the good ones possible. Find five of them, and reply to theirs too. That is the whole growth strategy. 🤝",
+    media: ["/mock/posts/ada-circle.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 2764,
+      comments: 187,
+      shares: 530,
+      reward: 0.74,
     },
   },
-
   {
     id: "9",
     author: {
-      name: "Tom | UiUx Designer",
-      username: "designwithtom",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562292/yVaPi9hr_400x400_zdfrvu.jpg",
+      name: "Femi | Product Designer",
+      username: "femi.designs",
+      avatar: "/mock/avatars/femi.svg",
       verified: true,
     },
     content:
-      "Before colors and fonts, also remember: Layout - Flow - Information hierarchy. If the structure is bad, no UI will save it. Enjoy your weekend guys ",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775339234/HD7GFdmakAAUucd_h4rina.jpg",
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775339233/HD7GFdpa4AAdJNk_mzojdv.jpg",
-    ],
+      "Same screen, twice. The second version only changes spacing and the order of things. No new colors and no new font. Structure does most of the work, so sort that out before you touch the paint.",
+    media: ["/mock/posts/femi-before.svg", "/mock/posts/femi-after.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 3410,
+      comments: 142,
+      shares: 688,
+      reward: 0.61,
     },
   },
-
   {
     id: "10",
     author: {
-      name: "Tom | UiUx Designer",
-      username: "designwithtom",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562292/yVaPi9hr_400x400_zdfrvu.jpg",
+      name: "Femi | Product Designer",
+      username: "femi.designs",
+      avatar: "/mock/avatars/femi.svg",
       verified: true,
     },
-    content: "On seat… ",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775340355/HDneaLEXQAAD7Fb_xhicub.jpg",
-    ],
+    content: "Back at the desk. ☕",
+    media: ["/mock/posts/femi-desk.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 268,
+      comments: 12,
+      shares: 9,
+      reward: 0.04,
     },
   },
-
   {
     id: "11",
     author: {
-      name: "Tom | UiUx Designer",
-      username: "designwithtom",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562292/yVaPi9hr_400x400_zdfrvu.jpg",
+      name: "Femi | Product Designer",
+      username: "femi.designs",
+      avatar: "/mock/avatars/femi.svg",
       verified: true,
     },
     content:
-      "I’m Tom, a 16-year-old UX designer based in the North-central part of Nigeria. Let’s connect and ship products",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775340854/HDOjlfqXEAAILJg_nw4yjk.jpg",
-    ],
+      "Hi, I’m Femi. I design product interfaces, and I’m here to meet people who like to ship. Say hello.",
+    media: ["/mock/posts/femi-hello.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 1105,
+      comments: 203,
+      shares: 64,
+      reward: 0.22,
     },
   },
   {
     id: "12",
     author: {
-      name: "Darvori",
-      username: "davoritoons",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
+      name: "Zuri",
+      username: "zuri.animates",
+      avatar: "/mock/avatars/zuri.svg",
       verified: true,
     },
     content:
-      "I make every type of animation 🤯🤯 Here is a pixel art animation I did for mystic base. I’m one dm away, let’s talk about your next project.",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/video/upload/v1775341427/814561b5-5e4b-4dd0-9fca-8ed8a13a85e3_phd4fp.mp4",
-    ],
+      "Pixel-art loop for a client’s launch page. Thirty frames, about a week of evenings. I also do character loops, logo stings and short explainers, so message me if you have a project in mind.",
+    media: ["/mock/posts/zuri-rocket.mp4"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 2290,
+      comments: 118,
+      shares: 345,
+      reward: 0.57,
     },
   },
   {
     id: "13",
     author: {
-      name: "Darvori",
-      username: "davoritoons",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
+      name: "Zuri",
+      username: "zuri.animates",
+      avatar: "/mock/avatars/zuri.svg",
       verified: true,
     },
-    content:
-      "My favorite time of the day to work, is late at night. At this point just call me Batman. 😂",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775341622/GuuD1rXXcAA71cy_bidieb.jpg",
-    ],
+    content: "My best work happens after midnight. The owls understand. 🦉",
+    media: ["/mock/posts/zuri-night.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 760,
+      comments: 58,
+      shares: 43,
+      reward: 0.11,
     },
   },
-
   {
     id: "14",
     author: {
-      name: "Darvori",
-      username: "davoritoons",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775562035/cTUPG7EE_400x400_eybpdp.jpg",
+      name: "Zuri",
+      username: "zuri.animates",
+      avatar: "/mock/avatars/zuri.svg",
       verified: true,
     },
     content:
-      "My boys 😎 which one of these guys is your favorite. #jeet @HacsperLingoog @Charles_Fx16 @mhuxzitics @N1Fredy @onahcharles_ @Handinomeric @Garakazekag @BobbiAndrea_ZM @_Sammyp01 @KingDamilotun @king__ask",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/image/upload/v1775343045/GuKVaU4WUAAOwJi_luiyf2.jpg",
-    ],
+      "Meet the squad: six characters from the series I’m drawing this month. Tell me your favorite and I’ll animate the winner first. #characterdesign",
+    media: ["/mock/posts/zuri-squad.svg"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 1512,
+      comments: 264,
+      shares: 131,
+      reward: 0.33,
     },
   },
-
   {
     id: "15",
     author: {
-      name: "Anjorin",
-      username: "cryp_Alchemist",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563039/3MYgzaxE_400x400_uk7vuu.jpg",
-      verified: true,
-    },
-    content: "Every serious trader will have an agent...",
-    engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
-    },
-  },
-
-  {
-    id: "16",
-    author: {
-      name: "Anjorin",
-      username: "cryp_Alchemist",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563039/3MYgzaxE_400x400_uk7vuu.jpg",
-      verified: true,
-    },
-    content: "Teach them football and not that rugby they are playing",
-    engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
-    },
-  },
-
-  {
-    id: "17",
-    author: {
-      name: "Anjorin",
-      username: "cryp_Alchemist",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563039/3MYgzaxE_400x400_uk7vuu.jpg",
+      name: "Kai",
+      username: "kai.trades",
+      avatar: "/mock/avatars/kai.svg",
       verified: true,
     },
     content:
-      "Tonight, I set up an AI Agent as an LP on a prediction market I am NOT a developer Here's what I learned: • MCP gives AI agents hands to interact with the world • x402 gives AI agents a wallet to pay for things•  Together they are the foundation of the agent economy We are so early 🌍",
+      "A year from now, most traders will not place their own orders. Their software will.",
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 684,
+      comments: 92,
+      shares: 120,
+      reward: 0.09,
+    },
+  },
+  {
+    id: "16",
+    author: {
+      name: "Kai",
+      username: "kai.trades",
+      avatar: "/mock/avatars/kai.svg",
+      verified: true,
+    },
+    content:
+      "Risk management is just admitting, in advance, that you might be wrong.",
+    engagement: {
+      likes: 1930,
+      comments: 77,
+      shares: 402,
+      reward: 0.27,
+    },
+  },
+  {
+    id: "17",
+    author: {
+      name: "Kai",
+      username: "kai.trades",
+      avatar: "/mock/avatars/kai.svg",
+      verified: true,
+    },
+    content:
+      "I spent the evening letting a small script manage a test wallet. I am not an engineer. What I learned: • Give it a tiny budget first • Log every action it takes • Never hand it keys you cannot afford to lose. Slow and careful, and still the most interesting thing I did all week. 🌍",
+    engagement: {
+      likes: 3077,
+      comments: 241,
+      shares: 590,
+      reward: 0.66,
     },
   },
   {
     id: "18",
     author: {
-      name: "DaoWakanda",
-      username: "DaoWakanda",
-      avatar:
-        "https://res.cloudinary.com/du153mzwk/image/upload/v1775563771/FdFISPL__400x400_kv6a3j.jpg",
+      name: "Rootline DAO",
+      username: "rootlinedao",
+      avatar: "/mock/avatars/rootline.svg",
       verified: true,
     },
     content:
-      "Participation = Power at Daowakanda. The People who secure & build get to decide. We’re evolving to validator-based, on-chain governance. By becoming a DAO Validator, you unlock proposal + voting rights. We’re aligning governance, power, and community value. The new Daowakanda is coming. Stay tuned. 🚀",
-    media: [
-      "https://res.cloudinary.com/du153mzwk/video/upload/v1775564161/122b734d-d6c3-46fb-a5c7-a9bc394a4075_mginhz.mov",
-    ],
+      "Voting opens on Monday. Every member who reviewed grant proposals this season gets a say in how the next round is funded. One wallet, one voice, and the results sit on-chain for anyone to check. Details are in the community tab. 🌳",
+    media: ["/mock/posts/rootline-vote.mp4"],
     engagement: {
-      likes: 400,
-      comments: 410,
-      shares: 200,
-      reward: 0.12,
+      likes: 4418,
+      comments: 356,
+      shares: 972,
+      reward: 1.08,
     },
   },
 ];

@@ -19,7 +19,6 @@ export default function CreatePost() {
               alt="User Avatar"
               className="w-full h-full object-cover"
             />
-            <div className="w-full h-full bg-gradient-to-br from-pink-400 to-purple-500" />
           </div>
 
           {/* Username + badge + role */}
@@ -89,6 +88,3 @@ export default function CreatePost() {
     </div>
   );
 }
-   
-
-export default CreatePost;
