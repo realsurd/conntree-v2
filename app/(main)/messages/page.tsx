@@ -150,7 +150,7 @@ const Message = () => {
             >
               <div className="max-w-[72%]">
                 {!message.mine && (
-                  <p className="mb-2 text-xs]">
+                  <p className="mb-2 text-xs">
                     <span className="font-semibold text-[#FFB703] ">
                       {message.from}
                     </span>{" "}

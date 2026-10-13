@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import AvatarCustomizer from "@/components/customized-avatars";
 import { Settings, Bell, X } from "lucide-react";
 
 type Notification = {

@@ -1,15 +1,9 @@
 "use client";
 
-import { useState } from "react";
-// import { Wallet } from "lucide-react";
 import RotatingBackground from "@/components/rotating-background";
 import Link from "next/link";
 
 function SignIn() {
-  const [currentStep, setCurrentStep] = useState(1);
-
-  //  h-161.75
-
   return (
     <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -28,76 +22,6 @@ function SignIn() {
       <div className="relative z-10 w-full h-full px-24 py-10 grid md:grid-cols-[45%_55%] gap-6 items-center">
         <div className="bg-gradient-to-br from-[#0d2847] to-[#0a1e35] h-full rounded-3xl px-8 relative overflow-hidden flex flex-col justify-between">
           <RotatingBackground />
-
-          <div className="space-y-6 mt-87.5 relative z-10">
-            {/* <div className="flex items-center gap-4">
-              <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  currentStep >= 1 ? "bg-orange-500" : "bg-gray-600"
-                }`}
-              >
-                <span className="text-white font-semibold">1</span>
-              </div>
-              <button
-                onClick={() => setCurrentStep(1)}
-                className={`px-6 py-3 rounded-lg border-2 transition-all ${
-                  currentStep >= 1
-                    ? "border-orange-500 text-orange-500 bg-transparent"
-                    : "border-gray-600 text-gray-500 bg-transparent"
-                }`}
-              >
-                Connect Wallet
-              </button>
-            </div> */}
-
-            {/* <div className="flex items-center gap-4">
-              <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  currentStep >= 2 ? "bg-green-500" : "bg-gray-600"
-                }`}
-              >
-                <span className="text-white font-semibold">2</span>
-              </div>
-              <button
-                onClick={() => setCurrentStep(2)}
-                className={`px-6 py-3 rounded-lg border-2 transition-all ${
-                  currentStep >= 2
-                    ? "border-green-500 text-green-500 bg-transparent"
-                    : "border-gray-600 text-gray-500 bg-transparent"
-                }`}
-              >
-                Create Account with Google
-              </button>
-            </div> */}
-
-            {/* <div className="flex items-center gap-4">
-              <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  currentStep >= 3 ? "bg-blue-500" : "bg-gray-600"
-                }`}
-              >
-                <span className="text-white font-semibold">3</span>
-              </div>
-              <button
-                onClick={() => setCurrentStep(3)}
-                className={`px-6 py-3 rounded-lg border-2 transition-all ${
-                  currentStep >= 3
-                    ? "border-blue-500 text-blue-500 bg-transparent"
-                    : "border-gray-600 text-gray-500 bg-transparent"
-                }`}
-              >
-                Customize your Avatar
-              </button>
-            </div> */}
-          </div>
-          {/* 
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 50% 50%, rgba(100, 150, 200, 0.15) 0%, transparent 70%)",
-            }}
-          /> */}
         </div>
 
         <div className="flex flex-col items-center text-white space-y-8 pt-10 px-[100px]">

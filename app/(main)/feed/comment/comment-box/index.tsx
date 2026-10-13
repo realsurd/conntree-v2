@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { VscSend } from "react-icons/vsc";
 import { GrGallery } from "react-icons/gr";
 import { IoIosClose } from "react-icons/io";
-import { FaGun } from "react-icons/fa6";
 
 interface CommentBoxProps {
   onSend?: (data: { text: string; image?: File }) => void;
@@ -36,7 +35,6 @@ const CommentBox = ({ onSend }: CommentBoxProps) => {
       ...(image && { image }),
     };
 
-    console.log("Sending comment:", payload);
     onSend?.(payload);
 
     // reset

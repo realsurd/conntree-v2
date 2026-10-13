@@ -1,8 +1,7 @@
 "use client";
 
 import { BackgroundOverlay } from "../background-overlay";
-// import styles from "./index.module.scss";
-// import SignIn from "@/app/auth/signin/page";
+
 interface Props {
   onClose: () => void;
   onGoToSignIn: () => void;
@@ -21,7 +20,9 @@ export const PasswordUpdatedModal = ({ onClose, onGoToSignIn }: Props) => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                className="w-9 h-9 stroke-white stroke-[3] fill-none stroke-linecap-round stroke-linejoin-round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-9 h-9 stroke-white stroke-[3] fill-none"
               >
                 <polyline points="20 6 9 17 4 12" />
               </svg>

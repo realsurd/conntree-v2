@@ -1,7 +1,6 @@
 "use client";
 
 import { authAtom } from "@/state";
-import { useWallet } from "@txnlab/use-wallet";
 import { ReactNode, useEffect, useState } from "react";
 import { useSetRecoilState } from "recoil";
 import { AuthLoader } from "./loader";
@@ -13,47 +12,23 @@ interface Props {
 export const AuthProvider = ({ children }: Props) => {
   const [loading, setLoading] = useState(true);
   const setAuth = useSetRecoilState(authAtom);
-  const { providers: wallets } = useWallet();
-
-  const disconnectWallet = () => {
-    for (const wallet of wallets || []) {
-      wallet.disconnect();
-    }
-
-    localStorage.clear();
-  };
-
-  const checkAuth = () => {
-    setLoading(true);
-    const authFromStorage = localStorage.getItem("auth");
-
-    if (!authFromStorage) {
-      disconnectWallet();
-      setLoading(false);
-      return;
-    }
-
-    try {
-      const auth = JSON.parse(authFromStorage);
-
-      if (auth.accessToken) {
-        setAuth(auth);
-        setLoading(false);
-      } else {
-        disconnectWallet();
-        setLoading(false);
-      }
-    } catch (error) {
-      disconnectWallet();
-      setLoading(false);
-    }
-  };
 
   useEffect(() => {
-    (async () => {
-      checkAuth();
-    })();
-  }, []);
+    // Restore a saved sign-in, if there is one. Having none only means the
+    // visitor is signed out. It must not disconnect the wallet or clear
+    // localStorage: the wallet library keeps the connected account there, and
+    // clearing it is what dropped the wallet on every page refresh.
+    try {
+      const saved = localStorage.getItem("auth");
+      const auth = saved ? JSON.parse(saved) : null;
+
+      if (auth?.accessToken) setAuth(auth);
+    } catch {
+      // Unreadable entry, or storage is blocked: carry on signed out.
+    }
+
+    setLoading(false);
+  }, [setAuth]);
 
   return loading ? <AuthLoader /> : <>{children}</>;
 };

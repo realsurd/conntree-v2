@@ -2,6 +2,7 @@
 
 import { RecoilRoot } from "recoil";
 import { AuthProvider } from "../auth-provider";
+import { WalletBalanceProvider } from "../wallet-balance-provider";
 import { WalletConnectProvider } from "../wallet-connect-provider";
 
 export default function RecoilContextProvider({
@@ -12,7 +13,10 @@ export default function RecoilContextProvider({
   return (
     <RecoilRoot>
       <WalletConnectProvider>
-        <AuthProvider>{children}</AuthProvider>
+        {/* Must sit inside WalletConnectProvider: it reads the connected wallet. */}
+        <WalletBalanceProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </WalletBalanceProvider>
       </WalletConnectProvider>
     </RecoilRoot>
   );

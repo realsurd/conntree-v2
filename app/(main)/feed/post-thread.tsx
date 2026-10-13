@@ -25,7 +25,11 @@ const CommentItem = ({
   return (
     <div className="flex flex-col gap-2">
       <div className="flex gap-3">
-        <img src={comment.author.avatar} className="w-8 h-8 rounded-full" />
+        <img
+          src={comment.author.avatar}
+          alt={`${comment.author.name}'s avatar`}
+          className="w-8 h-8 rounded-full"
+        />
 
         <div className="flex-1">
           <div className="flex items-center gap-2">
@@ -41,6 +45,7 @@ const CommentItem = ({
           {comment.image && (
             <img
               src={comment.image}
+              alt="Image attached to the comment"
               className="mt-2 rounded-lg max-h-40 object-cover"
             />
           )}
@@ -144,7 +149,11 @@ const PostThread = ({ post }: PostThreadProps) => {
       {/* 🔹 POST CONTENT */}
       <div className="p-4 border-white/10">
         <div className="flex gap-3">
-          <img src={post.author.avatar} className="w-10 h-10 rounded-full" />
+          <img
+            src={post.author.avatar}
+            alt={`${post.author.name}'s avatar`}
+            className="w-10 h-10 rounded-full"
+          />
 
           <div>
             <p className="font-semibold">{post.author.name}</p>

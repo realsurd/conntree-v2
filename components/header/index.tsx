@@ -28,9 +28,17 @@ const Header = () => {
   const formatAddress = (addr: string) =>
     `${addr.slice(0, 6)}...${addr.slice(-4)}`;
 
-  const handleCopy = () => {
+  const handleCopy = async () => {
     if (!activeAccount) return;
-    navigator.clipboard.writeText(activeAccount.address);
+
+    // Only say "copied" if the copy worked. The clipboard is unavailable on
+    // non-HTTPS pages and can be refused by the browser.
+    try {
+      await navigator.clipboard.writeText(activeAccount.address);
+    } catch {
+      return;
+    }
+
     setShowToast(true);
     setTimeout(() => setShowToast(false), 2000);
   };
@@ -68,22 +76,27 @@ const Header = () => {
           <div className="relative shrink-0" ref={menuRef}>
             {/* Connected Wallet Button */}
             <div className="flex items-center justify-between gap-2 px-4 py-2 rounded-2xl font-medium text-white border bg-[#292118] border-[#FB8501] cursor-pointer hover:opacity-90 transition w-fit min-w-[180px]">
-              <span className="text-sm md:text-lg font-opensans">
+              <span className="text-sm md:text-lg">
                 {formatAddress(activeAccount.address)}
               </span>
-              <span
+              <button
+                type="button"
                 className="cursor-pointer"
                 onClick={handleCopy}
                 title="Copy Wallet Address"
+                aria-label="Copy wallet address"
               >
                 <IoCopyOutline size={20} />
-              </span>
-              <span
+              </button>
+              <button
+                type="button"
                 className="cursor-pointer"
                 onClick={() => setShowWalletMenu((prev) => !prev)}
+                aria-label="Wallet menu"
+                aria-expanded={showWalletMenu}
               >
                 <IoIosArrowDown size={20} />
-              </span>
+              </button>
             </div>
 
             {/* Wallet Menu Modal */}
@@ -94,11 +107,12 @@ const Header = () => {
             )}
           </div>
         ) : (
-          <Link href="/auth/register">
-            {/* Get Started Button */}
-            <button className="bg-[#FB8500] hover:bg-[#ff9b3d] transition text-white font-semibold px-6 md:px-10 py-3 rounded-2xl text-sm md:text-base whitespace-nowrap shadow-md">
-              Get Started
-            </button>
+          // Get Started: a styled link (a <button> inside a link is invalid HTML)
+          <Link
+            href="/auth/register"
+            className="bg-[#FB8500] hover:bg-[#ff9b3d] transition text-white font-semibold px-6 md:px-10 py-3 rounded-2xl text-sm md:text-base whitespace-nowrap shadow-md"
+          >
+            Get Started
           </Link>
         )}
       </div>
