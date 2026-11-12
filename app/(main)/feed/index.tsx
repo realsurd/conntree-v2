@@ -4,7 +4,7 @@ import PostCard from "./post-card";
 import { posts } from "@/lib/data/post";
 import FeedTabs from "./feed-tabs";
 
-const Feed = () => {
+const wFeed = () => {
   return (
     <div className="space-y-6 w-full">
       <FeedTabs />
